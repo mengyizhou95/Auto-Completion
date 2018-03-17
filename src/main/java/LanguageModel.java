@@ -87,14 +87,12 @@ public class LanguageModel {
 				}
 			}
 
-			//2. implement minHeap
-			PriorityQueue<HashMap.Entry<Integer, List<String>>> pq = new PriorityQueue<HashMap.Entry<Integer, List<String>>>();
-
-			/*1, new Comparator<HashMap.Entry<Integer, List<String>>>(){
+			//2. implement maxHeap
+			PriorityQueue<HashMap.Entry<Integer, List<String>>> pq = new PriorityQueue<>(1, new Comparator<HashMap.Entry<Integer, List<String>>>(){
 				public int compare(HashMap.Entry<Integer, List<String>> a, HashMap.Entry<Integer, List<String>> b){
-					return a.getKey() - b.getKey();
+					return b.getKey() - a.getKey();
 				}
-			} */
+			});
 
 			//3. put into heap
 			for(HashMap.Entry<Integer, List<String>> entry : map.entrySet()){
